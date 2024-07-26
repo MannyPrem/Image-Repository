@@ -1,0 +1,27 @@
+import cv2
+import numpy as np
+img_1 = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\Candles2.jpg")
+img_2 = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\Hourglass.jpg")
+cv2.imshow("image 1", img_1)
+cv2.waitKey(0)
+cv2.imshow("image 2", img_2)
+cv2.waitKey(0)
+dest_and = cv2.bitwise_and(img_1, img_2, mask = None)
+cv2.imshow("Bitwise And", dest_and)
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows()
+    
+
+import cv2
+import numpy as np
+img_1 = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\Candles2.jpg")
+img_2 = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\Hourglass.jpg")
+cv2.imshow("image 1", img_1)
+cv2.waitKey(0)
+cv2.imshow("image 2", img_2)
+cv2.waitKey(0)
+dest_xor = cv2.bitwise_xor(img_1, img_2, mask = None)
+cv2.imshow("Bitwise XOR", dest_xor)
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows()
+
