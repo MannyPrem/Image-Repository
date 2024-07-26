@@ -1,0 +1,11 @@
+import cv2
+# Creates files and directories
+import os
+#r stands for "raw" and will cause backslashes in the string to be interpreted as actual backslashes rather than special characters.
+img = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\Cheezits.jpg", 1)
+window_name = 'Yumm'
+# First Perameter is the windows title
+cv2.imshow(window_name, img)
+# 0 means till the user closes it, it will hold GUI window on the screen.
+cv2.waitKey(0)
+cv2.destroyAllWindows()
