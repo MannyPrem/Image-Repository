@@ -1,0 +1,32 @@
+import cv2
+import os
+img = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\RGB_example.jpg", 1)
+#directory = r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images"
+directory2 = r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Code"
+os.chdir(directory2)
+print("Before Saving Image")
+print(os.listdir(directory2))
+filename = "RGB.jpg"
+cv2.imwrite(filename, img)
+print("After Saving Image")
+print(os.listdir(directory2))
+
+
+
+
+
+
+# The split function splits the multi colored image into seperate images
+X, Y, Z = cv2.split(img)
+# next we have to show the image for each color
+cv2.imshow("Original", img)
+cv2.waitKey(0)
+#the code above displays the origanal image
+cv2.imshow("Blue", X)
+cv2.waitKey(0)
+# Shows the blue image seperatly
+cv2.imshow("Green", Y)
+cv2.waitKey(0)
+#Shows the green channel
+cv2.imshow("Red", Z)
+cv2.waitKey(0)
