@@ -1,0 +1,21 @@
+import cv2
+import numpy as np
+#matplotlib has built in functions that can make changes to a figure
+import matplotlib.pyplot as plt
+
+img_1 = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\panda.jpg")
+#Getting the Origanal dimensions of the image
+(h, w) = img_1.shape[:2]
+print(h, w)
+cv2.imshow("Original Image", img_1)
+cv2.waitKey(0)
+new_w = 900
+#Using Numpy to calculate the aspect Ratio
+ratio = h / w
+new_h = int(new_w * ratio)
+print(new_h, new_w)
+
+resized_img = cv2.resize(img_1, (new_h, new_w))
+cv2.imshow("New Image", resized_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
