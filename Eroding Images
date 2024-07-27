@@ -1,0 +1,11 @@
+import cv2
+import numpy as np
+img = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\volcano.jpg")
+cv2.imshow("Original Image", img)
+cv2.waitKey(0)
+kernel = np.ones((6, 6), np.uint8)
+image = cv2.erode(img, kernel, cv2.BORDER_REFLECT)
+#Mirrors the reflection of the boarder
+cv2.imshow("Erodded Image", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows
