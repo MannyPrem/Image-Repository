@@ -1,0 +1,18 @@
+import cv2
+import numpy as np
+img = cv2.imread(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\yorkie.jpg", 1)
+cv2.imshow("Original Image", img)
+cv2.waitKey(0)
+#Gaussian Blurring - reduce image noise and reduce detail
+gblur = cv2.GaussianBlur(img,(7, 7), 0)
+cv2.imshow("Gaussian Blurring", gblur)
+cv2.waitKey(0)
+# Median Blur - Perseves Edges while removing Noise
+mblur = cv2.medianBlur(img, 5) 
+cv2.imshow('Median Blurring', mblur) 
+cv2.waitKey(0)
+# Bilateral Blur -replaces the intensity of each pixel with a weighted average of intensity values from nearby pixelss
+bblur = cv2.bilateralFilter(img, 9, 75, 75) 
+cv2.imshow('Bilateral Blurring', bblur) 
+cv2.waitKey(0) 
+cv2.destroyAllWindows() 
