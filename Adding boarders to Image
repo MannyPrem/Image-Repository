@@ -1,0 +1,12 @@
+import cv2
+path_img = r"C:\Users\Manue\OneDrive\Desktop\Python Programs\Working with Images\Images\piggy.jpg"
+img_1 = cv2.imread(path_img)
+cv2.imshow("Origanal Image", img_1)
+cv2.waitKey(0)
+image_2 = cv2.copyMakeBorder(img_1, 20, 20, 20, 20, cv2.BORDER_CONSTANT, None, value = 0) 
+cv2.imshow("Image 2", image_2)
+cv2.waitKey(0)
+image_3 = cv2.copyMakeBorder(image_2, 200, 150, 100, 100, cv2.BORDER_REFLECT) 
+cv2.imshow("Image 3", image_3)
+cv2.waitKey(0)
+cv2.destroyAllWindows
