@@ -1,0 +1,7 @@
+import pdfplumber
+import pandas as pd
+import re
+pdf=pdfplumber.open(r"C:\Users\Manue\OneDrive\Desktop\Python Programs\PDF Extraction\sample1 (1).pdf")
+page = pdf.pages[0]
+text = page.extract_text()
+print(text)
