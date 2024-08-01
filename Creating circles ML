@@ -1,0 +1,13 @@
+from sklearn.datasets import make_circles
+from matplotlib import pyplot as plt 
+from matplotlib import style
+ 
+style.use("fivethirtyeight")
+ 
+X, y = make_circles(n_samples = 70, noise = 0.03)
+plt.scatter(X[:, 0], X[:, 1], s = 50, color ='b')
+plt.xlabel("X")
+plt.ylabel("Y")
+ 
+plt.show()
+plt.clf()
